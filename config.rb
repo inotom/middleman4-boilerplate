@@ -62,6 +62,8 @@ I18n.enforce_available_locales = false
 
 # Build-specific configuration
 configure :build do
+  ignore '**/.keep'
+
   # Minify HTML on build (require middleman-minify-html)
   # activate :minify_html
 
