@@ -1,0 +1,35 @@
+{
+  "name": "middleman4-boilerplate",
+  "version": "1.0.0",
+  "description": "Middleman4 project boilerplate",
+  "config": {
+    "js_src_dir": "source/assets/js",
+    "dist_dir": "build",
+    "sass_src": "src/sass/index.scss",
+    "sass_tmp": ".tmp/assets/css/base.min.css",
+    "sass_out": "build/assets/css/base.min.css"
+  },
+  "scripts": {
+    "start": "middleman server",
+    "build": "npm run lint:sass && npm run lint:js && npm run clean && middleman build",
+    "build:sass:prod": "node-sass $npm_package_config_sass_src --output-style compressed | postcss --no-map --use autoprefixer --autoprefixer.browsers \"> 5% in JP, last 2 versions\" --output $npm_package_config_sass_out",
+    "build:sass:tmp": "node-sass $npm_package_config_sass_src --output-style compressed | postcss --no-map --use autoprefixer --autoprefixer.browsers \"> 5% in JP, last 2 versions\" --output $npm_package_config_sass_tmp",
+    "watch": "nodemon -w src/sass -e scss -x 'npm run watch:sass'",
+    "watch:sass": "node-sass $npm_package_config_sass_src $npm_package_config_sass_tmp --source-map-embed",
+    "clean": "rimraf '**/.DS_Store' & rimraf $npm_package_config_sass_out",
+    "lint:js": "eslint $npm_package_config_js_src_dir",
+    "lint:sass": "sass-lint -c .sass-lint.yml -v -q",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "iNo <wdf7322@yahoo.co.jp>",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "7.1.2",
+    "eslint": "4.5.0",
+    "node-sass": "4.5.3",
+    "nodemon": "1.11.0",
+    "postcss-cli": "4.1.0",
+    "rimraf": "2.6.1",
+    "sass-lint": "1.10.2"
+  }
+}

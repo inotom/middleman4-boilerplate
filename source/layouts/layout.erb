@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title><%= data.site.name %></title>
+<%= stylesheet_link_tag 'base.min' %>
+</head>
+<body class="<%= page_classes %>">
+
+<%= partial 'layouts/header' %>
+
+<%= yield %>
+
+<%= partial 'layouts/footer' %>
+
+<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js' %>
+<%= javascript_include_tag 'common' %>
+</body>
+</html>

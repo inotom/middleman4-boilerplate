@@ -1,0 +1,14 @@
+@charset 'utf-8';
+
+@import 'partical/settings';
+
+body {
+  min-width: 960px;
+}
+
+// mobile styles
+@media only screen and (max-width: $boundaryWidth) {
+  body {
+    min-width: 320px;
+  }
+}

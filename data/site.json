@@ -1,0 +1,14 @@
+{
+  "name": "Middleman4 boilerplate",
+  "url": "http://localhost:4567/",
+  "pages": {
+    "home": {
+      "title" : "ホーム",
+      "url" : "/index.html"
+    },
+    "about": {
+      "title" : "このサイトについて",
+      "url" : "/about/index.html"
+    }
+  }
+}

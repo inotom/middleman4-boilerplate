@@ -1,0 +1,10 @@
+<header role="banner">
+  <h1>
+    <%= link_to data.site.name, data.site.pages.home.url %>
+  </h1>
+  <nav role="navigation">
+    <% data.site.pages.each do |slug, page| %>
+      <%= link_to page.title, page.url %>
+    <% end %>
+  </nav>
+</header>

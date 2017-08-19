@@ -1,0 +1,9 @@
+.DS_Store
+*.swp
+*~
+*.log
+/build
+/node_modules
+/.tmp
+/.bundle
+/vendor
