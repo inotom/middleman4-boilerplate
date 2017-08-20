@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "middleman server",
-    "build": "npm run lint:sass && npm run lint:js && npm run clean && middleman build",
+    "build": "npm run lint:sass --silent && npm run lint:js --silent && npm run clean && middleman build",
     "build:sass:prod": "node-sass $npm_package_config_sass_src --output-style compressed | postcss --no-map --use autoprefixer --autoprefixer.browsers \"> 5% in JP, last 2 versions\" --output $npm_package_config_sass_out",
     "build:sass:tmp": "node-sass $npm_package_config_sass_src --output-style compressed | postcss --no-map --use autoprefixer --autoprefixer.browsers \"> 5% in JP, last 2 versions\" --output $npm_package_config_sass_tmp",
     "watch": "nodemon -w src/sass -e scss -x 'npm run lint:sass --silent && npm run watch:sass' & nodemon -w $npm_package_config_js_src_dir -e js -x 'npm run lint:js --silent'",
